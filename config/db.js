@@ -1,11 +1,14 @@
-const mongoose =require ("mongoose");
-const config =require ("./config")
+const mongoose = require("mongoose");
+const config = require("./config");
 
-const dbURl=config.db.url;
+const dbURl = config.db.url;
 
-mongoose.connect(dbURl).then(()=>{
+mongoose
+  .connect(dbURl)
+  .then(() => {
     console.log("mongodb is connected");
-}).catch((error)=>{
-console.log(error);
-process.exit(1);
-})
+  })
+  .catch((error) => {
+    console.log(error);
+    process.exit(1);
+  });

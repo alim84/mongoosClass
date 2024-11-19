@@ -9,4 +9,4 @@ const dev = {
   },
 };
 
-module.exports =dev;
+module.exports = dev;

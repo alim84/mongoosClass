@@ -1,6 +1,6 @@
 const express = require("express");
 const cors = require("cors");
-require("./config/db")
+require("./config/db");
 const userRouter = require("./routes/user.route");
 
 const app = express();
@@ -8,7 +8,7 @@ const app = express();
 app.use(cors());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use("/api/users", userRouter)
+app.use("/api/users", userRouter);
 
 app.get("/", (req, res) => {
   res.sendFile(__dirname + "/./views/index.html");
